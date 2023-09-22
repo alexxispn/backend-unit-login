@@ -30,7 +30,7 @@ describe("User", () => {
         const createUser = () => new User(1, "John Doe", "john@gmail.com", 17, "123456");
         expect(createUser).toThrow("Age must be greater than 18");
     })
-    it.only("creates a new user with password hashed", () => {
+    it("creates a new user with password hashed", () => {
         const user = new User(1, "John Doe", "john@gmail.com", 30, "123456");
         expect("123456").not.toBe(user.getHashedPassword());
         expect(user.getHashedPassword()).toBeDefined()
