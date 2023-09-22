@@ -5,9 +5,11 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "prepare": "husky install",
     "test": "vitest --no-watch",
     "test:watch": "vitest",
-    "prepare": "husky install"
+    "test:coverage": "vitest --coverage",
+    "postinstall": "husky install"
   },
   "keywords": [],
   "author": "",
