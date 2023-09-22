@@ -10,4 +10,8 @@ export class UserEmail {
         const re = /\S+@\S+\.\S+/;
         return re.test(email);
     }
+
+    getEmail() {
+        return this.email;
+    }
 }

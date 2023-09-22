@@ -9,4 +9,8 @@ export class UserName {
     validateName(name) {
         return name.length >= 3;
     }
+
+    getName() {
+        return this.name;
+    }
 }

@@ -17,23 +17,23 @@ export class User {
         this.password = new UserPassword(password);
     }
 
-    getId() {
-        return this.id.id
+    hasId(id) {
+        return this.id.id === id;
     }
 
-    getName() {
-        return this.name.name;
+    hasName(name) {
+        return this.name.name === name;
     }
 
-    getEmail() {
-        return this.email.email;
+    hasEmail(email) {
+        return this.email.email === email;
     }
 
-    getAge() {
-        return this.age.age;
+    hasAge(age) {
+        return this.age.age === age;
     }
 
     getHashedPassword() {
-        return this.password.password;
+        return this.password;
     }
 }

@@ -13,10 +13,8 @@ export class UserPassword {
     }
 
     hashPassword(password) {
-        const salt = crypto.randomBytes(16).toString("hex");
-        const hash = crypto
-            .pbkdf2Sync(password, salt, 1000, 64, "sha512")
-            .toString("hex");
-        this.password = { salt, hash };
+        return crypto.createHash("sha256")
+            .update(password)
+            .digest("hex");
     }
 }

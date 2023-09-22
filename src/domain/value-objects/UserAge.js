@@ -1,12 +1,12 @@
 export class UserAge {
     constructor(age) {
-        if (!this.validateUserIsAdult(age)) {
+        if (!this.ensureIsAdult(age)) {
             throw new Error("Age must be greater than 18");
         }
         this.age = age;
     }
 
-    validateUserIsAdult(age) {
+    ensureIsAdult(age) {
         return age >= 18;
     }
 }
